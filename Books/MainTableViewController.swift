@@ -9,6 +9,11 @@
 import UIKit
 
 class MainTableViewController: UITableViewController, LoginProtocol {//프로토콜 준수하겠다
+    
+    var myArr:[[String:String]] = [[String:String]]()
+    
+    
+    
 
     @IBAction func openLoginScene(_ sender: Any) {
         
@@ -50,6 +55,19 @@ class MainTableViewController: UITableViewController, LoginProtocol {//프로토
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        myArr.append("홍길동")
+//        myArr.append("김민수")
+//        myArr.append("김길동")
+        
+        let dict1:[String:String] = ["name":"홍길동","phone":"010-2323-2222"]
+        let dict2:[String:String] = ["name":"김민수","phone":"010-2323-3333"]
+        let dict3:[String:String] = ["name":"김길동","phone":"010-2323-5555"]
+        
+        myArr.append(dict1)
+        myArr.append(dict2)
+        myArr.append(dict3)
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -67,23 +85,32 @@ class MainTableViewController: UITableViewController, LoginProtocol {//프로토
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return myArr.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
+        
+        let dict = myArr[indexPath.row]
+        
+        
+        
+        cell.textLabel?.text = dict["name"]
+        cell.detailTextLabel?.text = dict["phone"]
 
+        print("Row: \(indexPath.row)")
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
