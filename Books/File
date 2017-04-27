@@ -1,0 +1,70 @@
+https://github.com/goyadb/NavigationTest
+
+
+고준일 강사
+
+맥 패스워드 1234
+
+https://macpaw.com/cleanmymac
+- 맥 앱 삭제 경우 클린하게 제거할 수 있음
+
+- 꼼꼼한 재은씨의~~~ 스위프트 책
+- 스위프트 프로그래밍(Swift)
+- 번역서:
+
+
+- xcode에서 editor 메뉴 > 하단 show raw markup 메뉴선택해서  설명을 넣을 수 있다.
+
+단축키
+Control a, e, p, n 으로 쉽게 이동할 수 있다.
+
+터미널 깃 크론
+git clone 주소
+
+xcode에서 원격 깃 등록 및 푸시는
+
+소스컨트롤 메뉴 > 상단 메뉴 > configure~~~  눌러서
+remote 선택 후 주소 등록 하기
+파일등록은 소스컨트롤 메뉴 > 푸시 메뉴 선택
+
+Gitignore.io 에서 이그노 파일 생성할 수 있다.
+- xcode, swift 단어 치고 크리에트 버튼 선택 하면 파일이 생성됨
+내용이 나타나면 재주것 파일을 만들어서 생성한다.
+- vi .gitignore 치고 붙여 넣고 저장 하기
+- 추가 하고 커밋하고 푸시한다.
+
+git status //상태보기
+git add //파일추가
+git commit ".gitignore 파일추가" //커밋명령
+git push //서버에 올리기
+
+
+Bitbucket 은 무료로 개인계정을 사용할 수 있다. 제약은 있음
+깃허브는 공개형만 무료
+
+
+
+
+Cocoa = (appkit->uikit) + foundation
+
+Cocoa touch = uikit + foundation
+
+
+
+Editor > canvas > show layout rectangle~  메뉴를 클릭해서 레이아웃 구조를 볼수 있다.
+
+
+일반 뷰컨트롤러에 네비게이션 컨트롤 추가하기 위해서는
+메뉴 에디터 > 임베디드 > 네비게이션컨트롤러
+
+강사님 깃허브
+https://github.com/goyadb/NavigationTest
+
+
+4일차 01 네비게이션 연결 및 통신
+02 uiAlertController
+04 테이블뷰컨트롤러 및 프로토콜 구현 통신
+05 이미지뷰에 앨범의 이미지를 가져옴
+
+네비게이션 컨트롤러 기본은 테이블뷰 컨트롤러가 함께 있다
+
