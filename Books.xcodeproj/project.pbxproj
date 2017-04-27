@@ -15,7 +15,7 @@
 		E41402D31EB1ABD200CC9957 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41402D21EB1ABD200CC9957 /* LoginViewController.swift */; };
 		E41402D51EB1AE5200CC9957 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41402D41EB1AE5200CC9957 /* MainTableViewController.swift */; };
 		E41402D71EB1BC9C00CC9957 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41402D61EB1BC9C00CC9957 /* PhotoViewController.swift */; };
-		E41402D91EB1D08A00CC9957 /* File in Resources */ = {isa = PBXBuildFile; fileRef = E41402D81EB1D08A00CC9957 /* File */; };
+		E41402D91EB1D08A00CC9957 /* NOTE in Resources */ = {isa = PBXBuildFile; fileRef = E41402D81EB1D08A00CC9957 /* NOTE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		E41402D21EB1ABD200CC9957 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E41402D41EB1AE5200CC9957 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		E41402D61EB1BC9C00CC9957 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		E41402D81EB1D08A00CC9957 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		E41402D81EB1D08A00CC9957 /* NOTE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 				E41402D21EB1ABD200CC9957 /* LoginViewController.swift */,
 				E41402D41EB1AE5200CC9957 /* MainTableViewController.swift */,
 				E41402D61EB1BC9C00CC9957 /* PhotoViewController.swift */,
-				E41402D81EB1D08A00CC9957 /* File */,
+				E41402D81EB1D08A00CC9957 /* NOTE */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -136,7 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E41402D91EB1D08A00CC9957 /* File in Resources */,
+				E41402D91EB1D08A00CC9957 /* NOTE in Resources */,
 				E41402CB1EB18ACC00CC9957 /* LaunchScreen.storyboard in Resources */,
 				E41402C81EB18ACC00CC9957 /* Assets.xcassets in Resources */,
 				E41402C61EB18ACC00CC9957 /* Main.storyboard in Resources */,
