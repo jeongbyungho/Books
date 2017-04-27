@@ -14,7 +14,7 @@ protocol LoginProtocol {
 }
 
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
 
@@ -30,7 +30,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        //nameTextField.delegate = self //code상의 delegate 연결
+        
         // Do any additional setup after loading the view.
     }
 
@@ -42,6 +45,12 @@ class LoginViewController: UIViewController {
     //var delegate: MainTableViewController? = nil
     var delegate: LoginProtocol? = nil
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
+    //프로토콜 구현 시 현재 자신 self를 delegate해줘야함
     
 
     /*
