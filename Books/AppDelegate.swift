@@ -59,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
         saveBooks()
+        //디버깅 해보기, 디버깅해서 파일저장 경로를 살펴볼수 있다.
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
