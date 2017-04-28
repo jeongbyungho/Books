@@ -16,6 +16,7 @@
 		E41402D51EB1AE5200CC9957 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41402D41EB1AE5200CC9957 /* MainTableViewController.swift */; };
 		E41402D71EB1BC9C00CC9957 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41402D61EB1BC9C00CC9957 /* PhotoViewController.swift */; };
 		E41402D91EB1D08A00CC9957 /* NOTE in Resources */ = {isa = PBXBuildFile; fileRef = E41402D81EB1D08A00CC9957 /* NOTE */; };
+		E43259621EB2D8470051AD9C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43259611EB2D8470051AD9C /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E41402D41EB1AE5200CC9957 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		E41402D61EB1BC9C00CC9957 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		E41402D81EB1D08A00CC9957 /* NOTE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTE; sourceTree = "<group>"; };
+		E43259611EB2D8470051AD9C /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				E41402D41EB1AE5200CC9957 /* MainTableViewController.swift */,
 				E41402D61EB1BC9C00CC9957 /* PhotoViewController.swift */,
 				E41402D81EB1D08A00CC9957 /* NOTE */,
+				E43259611EB2D8470051AD9C /* Book.swift */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			files = (
 				E41402D51EB1AE5200CC9957 /* MainTableViewController.swift in Sources */,
 				E41402D31EB1ABD200CC9957 /* LoginViewController.swift in Sources */,
+				E43259621EB2D8470051AD9C /* Book.swift in Sources */,
 				E41402C31EB18ACC00CC9957 /* ViewController.swift in Sources */,
 				E41402C11EB18ACC00CC9957 /* AppDelegate.swift in Sources */,
 				E41402D71EB1BC9C00CC9957 /* PhotoViewController.swift in Sources */,

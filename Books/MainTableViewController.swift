@@ -10,10 +10,11 @@ import UIKit
 
 class MainTableViewController: UITableViewController, LoginProtocol {//프로토콜 준수하겠다
     
-    var myArr:[[String:String]] = [[String:String]]()
+    //var myArr:[[String:String]] = [[String:String]]()
     
+    var appdelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
     
-    
+    var userName:String? = nil
 
     @IBAction func openLoginScene(_ sender: Any) {
         
@@ -49,6 +50,52 @@ class MainTableViewController: UITableViewController, LoginProtocol {//프로토
     //프로토콜 구현
     func completedLogin(name: String) {
         print(name)
+        //전달 받은 시점에는 팝업을 띄울 수 없는 상태 일 수 있다. 당시 시점에는 현재 뷰가 뜬 상태가 아닐수 있기 때문
+        
+        userName = name
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if let curName = userName {
+            openAlert(curName)
+        }
+        
+        self.tableView.reloadData()//테이블뷰를 다시 리로딩 데이터 변경 적용
+        
+    }
+    
+    func openAlert(_ name:String) {
+        
+        let alert = UIAlertController(title: "Books", message: "\(name)님 환영합니다.", preferredStyle: UIAlertControllerStyle.alert)
+        //다른 스타일도 있다.
+        //UIAlertControllerStyle.actionSheet
+        
+        let okAction = UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil)
+        
+        
+        //handler 매개변수를 지운경우 {중괄호를 넣어서 함수의 내용을 담을 수 있음}
+//        let cancelAction = UIAlertAction(title: "취소", style: UIAlertActionStyle.cancel) {
+//            (action: UIAlertAction) -> () in
+//            print(action.title!)//"취소"
+//            self.view.backgroundColor = UIColor.red
+//        }
+        
+        alert.addAction(okAction)
+        //alert.addAction(cancelAction)
+        
+        
+        //self.present(alert, animated: true, completion: nil)
+        
+        self.present(alert, animated: true) {
+            
+            Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {
+                (Timer) -> Void in
+                alert.dismiss(animated: true, completion: nil)
+            })
+            
+        }
     }
     
     
@@ -60,15 +107,7 @@ class MainTableViewController: UITableViewController, LoginProtocol {//프로토
 //        myArr.append("김민수")
 //        myArr.append("김길동")
         
-        let dict1:[String:String] = ["name":"홍길동","phone":"010-2323-2222"]
-        let dict2:[String:String] = ["name":"김민수","phone":"010-2323-3333"]
-        let dict3:[String:String] = ["name":"김길동","phone":"010-2323-5555"]
-        
-        myArr.append(dict1)
-        myArr.append(dict2)
-        myArr.append(dict3)
-        
-
+       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -90,7 +129,16 @@ class MainTableViewController: UITableViewController, LoginProtocol {//프로토
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return myArr.count
+        //return myArr.count
+        
+        
+        if let books = appdelegate?.books {
+            return books.count
+        } else {
+            return 0
+        }
+        
+        //return appdelegate?.books.count
     }
 
     
@@ -99,13 +147,18 @@ class MainTableViewController: UITableViewController, LoginProtocol {//프로토
 
         // Configure the cell...
         
-        let dict = myArr[indexPath.row]
+        //let dict = myArr[indexPath.row]
         
         
+        guard let books = appdelegate?.books else {
+            return cell
+        }
         
-        cell.textLabel?.text = dict["name"]
-        cell.detailTextLabel?.text = dict["phone"]
-
+        cell.textLabel?.text = books[indexPath.row].title
+        cell.detailTextLabel?.text = books[indexPath.row].author
+        cell.imageView?.image = books[indexPath.row].corverImage
+        
+        
         print("Row: \(indexPath.row)")
         
         return cell
